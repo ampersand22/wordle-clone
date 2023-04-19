@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/github.io/wordle-clone/static/css/main.d6358b22.css",
-    "main.js": "/github.io/wordle-clone/static/js/main.17af0652.js",
-    "static/js/787.b7eb5c8c.chunk.js": "/github.io/wordle-clone/static/js/787.b7eb5c8c.chunk.js",
-    "static/media/4letter-bank.txt": "/github.io/wordle-clone/static/media/4letter-bank.e0ccc394dc53dab74cd8.txt",
-    "static/media/wordle-bank.txt": "/github.io/wordle-clone/static/media/wordle-bank.6ace1dbf5cae3fc37fc3.txt",
-    "index.html": "/github.io/wordle-clone/index.html",
-    "main.d6358b22.css.map": "/github.io/wordle-clone/static/css/main.d6358b22.css.map",
-    "main.17af0652.js.map": "/github.io/wordle-clone/static/js/main.17af0652.js.map",
-    "787.b7eb5c8c.chunk.js.map": "/github.io/wordle-clone/static/js/787.b7eb5c8c.chunk.js.map"
+    "main.css": "/wordle-clone/static/css/main.d6358b22.css",
+    "main.js": "/wordle-clone/static/js/main.dd57e579.js",
+    "static/js/787.b7eb5c8c.chunk.js": "/wordle-clone/static/js/787.b7eb5c8c.chunk.js",
+    "static/media/4letter-bank.txt": "/wordle-clone/static/media/4letter-bank.e0ccc394dc53dab74cd8.txt",
+    "static/media/wordle-bank.txt": "/wordle-clone/static/media/wordle-bank.6ace1dbf5cae3fc37fc3.txt",
+    "index.html": "/wordle-clone/index.html",
+    "main.d6358b22.css.map": "/wordle-clone/static/css/main.d6358b22.css.map",
+    "main.dd57e579.js.map": "/wordle-clone/static/js/main.dd57e579.js.map",
+    "787.b7eb5c8c.chunk.js.map": "/wordle-clone/static/js/787.b7eb5c8c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d6358b22.css",
-    "static/js/main.17af0652.js"
+    "static/js/main.dd57e579.js"
   ]
 }
