@@ -17,6 +17,7 @@ function Keyboard() {
     onDelete,
   } = useContext(AppContext);
 
+  // useCallback prevents too many updates
   const handleKeyboard = useCallback(
     (event) => {
       if (gameOver.gameOver) return;
@@ -44,6 +45,8 @@ function Keyboard() {
     },
     [currAttempt]
   );
+
+  // detect keyboard event, have to removeEventListener on return
   useEffect(() => {
     document.addEventListener("keydown", handleKeyboard);
 

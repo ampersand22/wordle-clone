@@ -1,6 +1,6 @@
-import { useState } from "react"
+import { useContext } from "react"
 import Letter from "./Letter"
-import { threeBoardDefault } from "../Words"
+// import { threeBoardDefault } from "../Words"
 
 const ThreeBoard = () => {
 
