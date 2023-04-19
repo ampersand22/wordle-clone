@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react';
 import { AppContext } from '../App';
-import { boardDefault } from '../Words';
+import { boardDefault, threeBoardDefault, fourBoardDefault } from '../Words';
 
 const Letter = ({ letterPos, attemptVal }) => {
   const {board} = useContext(AppContext);

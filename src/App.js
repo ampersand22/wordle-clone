@@ -1,14 +1,20 @@
 import "./App.css";
 import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
-import { boardDefault, generateWordSet } from "./Words";
+import { boardDefault, generateWordSet, threeBoardDefault, fourBoardDefault } from "./Words";
 import { useState, createContext, useEffect } from "react";
 import GameOver from "./components/GameOver";
+// import ThreeBoard from "./components/ThreeBoard";
+import FourBoard from "./components/FourBoard";
+
 
 export const AppContext = createContext();
 
 function App() {
   const [board, setBoard] = useState(boardDefault);
+  const [threeBoard, setThreeBoard] = useState(threeBoardDefault)
+  const [fourBoard, setFourBoard] = useState(fourBoardDefault)
+  const [active, setActive] = useState(boardDefault)
   const [currAttempt, setCurrAttempt] = useState({ attempt: 0, letter: 0 });
   const [wordSet, setWordSet] = useState(new Set());
   const [correctWord, setCorrectWord] = useState("");
@@ -68,15 +74,24 @@ function App() {
     });
   };
 
+  const activeHandler = () => {
+    setActive(!active)
+  }
+
+
   return (
     <div className="App">
-      <nav>
+      <nav className="navBar">
         <h1>Wordle</h1>
       </nav>
       <AppContext.Provider
         value={{
           board,
           setBoard,
+          threeBoard,
+          setThreeBoard,
+          fourBoard,
+          setFourBoard,
           currAttempt,
           setCurrAttempt,
           correctWord,
@@ -89,7 +104,14 @@ function App() {
         }}
       >
         <div className="game">
-          <Board />
+        {active ?
+          <button className="buttonBox" onClick={activeHandler}> Click for 4 Letters</button> :
+          <button className="buttonBox" onClick={activeHandler}> Click for 5 letters</button>
+        }
+        {active ? 
+          <Board /> : <FourBoard />
+        }
+        {active }
           {gameOver.gameOver ? <GameOver /> : <Keyboard />}
         </div>
       </AppContext.Provider>

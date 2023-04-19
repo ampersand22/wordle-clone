@@ -125,3 +125,10 @@ nav h1 {
 #disabled {
   background-color: #3a393c;
 }
+
+.buttonBox {
+  background-color: #121212;
+  color: white;
+  height: 4em;
+  border-radius: 40px;
+}

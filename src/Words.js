@@ -43,3 +43,29 @@ export const generateWordSet = async () => {
     });
   return { wordSet, todaysWord };
 };
+
+export const generateThreeLetterSet = async () => {
+  let wordSet;
+  let todaysWord;
+  await fetch(threeLetterBank)
+    .then((response) => response.text())
+    .then((result) => {
+      const wordArr = result.split("\n");
+      todaysWord = wordArr[Math.floor(Math.random() * wordArr.length)];
+      wordSet = new Set(wordArr);
+    });
+  return { wordSet, todaysWord };
+};
+
+export const generateFourLetterSet = async () => {
+  let wordSet;
+  let todaysWord;
+  await fetch(fourLetterBank)
+    .then((response) => response.text())
+    .then((result) => {
+      const wordArr = result.split("\n");
+      todaysWord = wordArr[Math.floor(Math.random() * wordArr.length)];
+      wordSet = new Set(wordArr);
+    });
+  return { wordSet, todaysWord };
+};
